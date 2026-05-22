@@ -2,17 +2,30 @@ import { createMetadata } from '@/config/metadata';
 import { buildSchema } from '@/lib/seo';
 import clientRegistry from '@/config/clients/registry';
 
-export function metadataForClient(content: any) {
+type ClientContent = {
+  seo?: Record<string, unknown>;
+  [key: string]: unknown;
+};
+
+export function metadataForClient(content: ClientContent) {
   return createMetadata(content.seo);
 }
 
-export function jsonLdForClient(content: any) {
+export function jsonLdForClient(content: ClientContent) {
   return buildSchema(content);
 }
 
 export function sitemapEntriesForClients() {
   const clients = clientRegistry.listClients();
-  return clients.map((c) => ({ url: c.slug, lastModified: new Date().toISOString() }));
+
+  return clients.map((c) => ({
+    url: c.slug,
+    lastModified: new Date().toISOString(),
+  }));
 }
 
-export default { metadataForClient, jsonLdForClient, sitemapEntriesForClients };
+export default {
+  metadataForClient,
+  jsonLdForClient,
+  sitemapEntriesForClients,
+};
