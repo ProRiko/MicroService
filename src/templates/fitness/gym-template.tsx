@@ -39,6 +39,13 @@ export function GymTemplate({ content }: GymTemplateProps) {
     : undefined;
 
   const whatsappHref = content.business?.whatsapp ? `https://wa.me/${content.business.whatsapp.replace(/\D/g, '')}` : undefined;
+  const consultationCta = {
+    ...content.cta,
+    primaryLabel: 'Book WhatsApp Consultation',
+    primaryHref: whatsappHref ?? content.cta.primaryHref,
+    secondaryLabel: 'View Membership Plans',
+    secondaryHref: '#pricing'
+  };
 
   return (
     <div className={cn('min-h-screen bg-background text-foreground industry-gym')} data-industry={content.key} style={themeStyle}>
@@ -67,7 +74,7 @@ export function GymTemplate({ content }: GymTemplateProps) {
           <TransformationStatsSection
             eyebrow="Transformation statistics"
             title="High-accountability coaching that produces visible progress."
-            description="Weekly tracking, coach oversight, and recovery protocols drive measurable outcomes across strength, body composition, and consistency."
+            description="Weekly tracking, coach oversight, and recovery protocols drive measurable outcomes across strength, body composition, and consistency for busy Indian routines."
             items={content.transformationStats}
           />
         ) : null}
@@ -78,7 +85,7 @@ export function GymTemplate({ content }: GymTemplateProps) {
           <TrainerShowcaseSection
             eyebrow="Coach team"
             title="Certified trainers who combine intensity with precise programming."
-            description="Each coach leads by discipline, tracks your progression weekly, and adapts sessions to your performance and recovery profile."
+            description="Each coach leads by discipline, tracks your progression weekly, and adapts sessions to your performance, recovery profile, and work schedule."
             items={content.trainers}
           />
         ) : null}
@@ -89,7 +96,7 @@ export function GymTemplate({ content }: GymTemplateProps) {
           <TransformationStoriesSection
             eyebrow="Before and after"
             title="Transformation stories from members who stayed consistent."
-            description="Real progress over 8 to 16 weeks through coached training blocks, nutrition guidance, and community accountability."
+            description="Real progress over 8 to 16 weeks through coached training blocks, nutrition guidance, and community accountability that fits Indian city life."
             items={content.transformationStories}
           />
         ) : null}
@@ -98,7 +105,7 @@ export function GymTemplate({ content }: GymTemplateProps) {
           <EquipmentShowcaseSection
             eyebrow="Equipment showcase"
             title="Performance zones built for serious training output."
-            description="From strength racks to athletic turf, every zone is designed for progression, coaching visibility, and athlete flow."
+            description="From strength racks to athletic turf, every zone is designed for progression, coaching visibility, and smooth member flow."
             items={content.equipment}
           />
         ) : null}
@@ -107,7 +114,7 @@ export function GymTemplate({ content }: GymTemplateProps) {
           <ClassScheduleSection
             eyebrow="Class schedule"
             title="Morning and evening classes engineered for busy professionals."
-            description="Choose from strength, conditioning, and hybrid sessions with clear intensity levels and coach supervision."
+            description="Choose from strength, conditioning, and hybrid sessions with clear intensity levels and coach supervision around Indian workdays."
             items={content.classSchedule}
             image={content.gallery.items[0]?.image ?? '/images/demo/gym/schedule.jpg'}
           />
@@ -117,22 +124,22 @@ export function GymTemplate({ content }: GymTemplateProps) {
         <GallerySection {...content.gallery} />
 
         {content.mobileApp ? <MobileAppCtaSection app={content.mobileApp} /> : null}
-        <FreeTrialCtaSection cta={content.cta} />
+        <FreeTrialCtaSection cta={consultationCta} />
 
         {content.business?.whatsapp ? <WhatsAppJoinBand phone={content.business.whatsapp} /> : null}
 
-        <ContactSection {...content.contact} cta={content.cta} />
+        <ContactSection {...content.contact} cta={consultationCta} />
         <MapSection map={content.map} />
       </main>
 
       <Footer brand={content.brand} navItems={content.nav} />
 
-      {content.business?.whatsapp ? <FloatingWhatsAppCTA phone={content.business.whatsapp} label="Join Forge on WhatsApp" /> : null}
+      {content.business?.whatsapp ? <FloatingWhatsAppCTA phone={content.business.whatsapp} label="Book WhatsApp Consultation" /> : null}
       <StickyMobileCtaBar
-        primaryLabel="Start Free Trial"
-        primaryHref={content.cta.primaryHref}
-        secondaryLabel="Join WhatsApp"
-        secondaryHref={whatsappHref}
+        primaryLabel="Book WhatsApp Consultation"
+        primaryHref={whatsappHref ?? content.cta.primaryHref}
+        secondaryLabel="View Membership Plans"
+        secondaryHref="#pricing"
       />
     </div>
   );

@@ -3,10 +3,10 @@ import type { TemplateContent } from '@/types/content';
 export const gymTemplateContent: TemplateContent = {
   key: 'gym',
   seo: {
-    title: 'Forge Athletics Club | Cinematic Premium Gym Demo',
+    title: 'Forge Athletics Club | Premium Indian Gym Demo',
     description:
-      'A cinematic, conversion-focused gym website demo for premium fitness studios and transformation-led coaching brands.',
-    keywords: ['premium gym website', 'fitness transformation', 'high-end gym', 'athletic coaching studio'],
+      'A premium, conversion-focused gym website demo for Indian fitness studios, strength clubs, and transformation-led coaching brands.',
+    keywords: ['premium gym website india', 'fitness transformation', 'high-end gym', 'athletic coaching studio'],
     canonicalPath: '/demo/gym'
   },
   theme: {
@@ -18,18 +18,18 @@ export const gymTemplateContent: TemplateContent = {
   },
   business: {
     type: 'local-business',
-    whatsapp: '+15552039481',
+    whatsapp: '+919876543210',
     bookingHref: '#contact',
     instagramHref: 'https://instagram.com',
     socials: [{ label: 'Instagram', href: 'https://instagram.com' }]
   },
   brand: {
     name: 'Forge Athletics Club',
-    tagLine: 'Luxury performance training for disciplined professionals, athletes, and serious beginners.',
-    phone: '(555) 203-9481',
+    tagLine: 'Performance training for disciplined professionals, athletes, and serious beginners across India.',
+    phone: '+91 98765 43210',
     email: 'join@forgeathletics.com',
-    address: '1250 Market Street, Suite 4, Austin, TX',
-    hours: 'Mon-Fri 5:00am-10:00pm · Sat-Sun 6:00am-6:00pm'
+    address: '12th Floor, Orion Hub, Lower Parel, Mumbai, Maharashtra',
+    hours: 'Mon-Fri 5:00am-10:00pm · Sat-Sun 6:00am-8:00pm'
   },
   nav: [
     { label: 'Programs', href: '#services' },
@@ -39,10 +39,10 @@ export const gymTemplateContent: TemplateContent = {
     { label: 'Contact', href: '#contact' }
   ],
   trustBadges: [
-    { label: 'NSCA + NASM certified coaching team' },
+    { label: 'Certified coaching team' },
     { label: 'Recovery lounge and mobility studio' },
     { label: 'App-based coaching and habit tracking' },
-    { label: '24-hour WhatsApp onboarding support' }
+    { label: 'WhatsApp consultation and onboarding support' }
   ],
   proofItems: [
     { label: 'Member community', value: '2,800+', description: 'Active members across classes, open gym, and PT tracks.' },
@@ -56,20 +56,20 @@ export const gymTemplateContent: TemplateContent = {
     { label: 'Retention at 6 months', value: '88%', detail: 'Members maintaining training consistency beyond initial goals.' }
   ],
   hero: {
-    eyebrow: 'Forge Performance Club',
-    title: 'Build a stronger body. Move with confidence. Look unstoppable.',
+    eyebrow: 'Forge Performance Club · Mumbai to Bangalore ready',
+    title: 'Build a stronger body with Indian coaching that fits real life.',
     description:
-      'Forge is a premium strength and conditioning gym for ambitious people who want visible progress. Elite coaching, high-performance programming, and a cinematic training floor designed to keep your momentum high.',
+      'Forge is a premium strength and conditioning gym for ambitious people who want visible progress. Coaching fits early office hours, school runs, and late-evening sessions without losing the discipline of proper training.',
     media: {
       image: '/images/demo/gym/hero-main.jpg',
       alt: 'Athlete performing barbell lift in premium dark gym',
-      caption: 'High-intensity coaching sessions, premium equipment, and a transformation-first gym culture.'
+      caption: 'High-intensity coaching sessions, premium equipment, and a transformation-first gym culture built for Indian city life.'
     },
     primaryCta: {
       eyebrow: 'Transformation starts now',
-      title: 'Start your first 6-week coached sprint',
-      description: 'Meet your coach, set measurable goals, and train with a progression system built for real outcomes.',
-      primaryLabel: 'Start Your Transformation',
+      title: 'Start with a WhatsApp consultation and a 6-week coached sprint.',
+      description: 'Message the team, set measurable goals, and train with a progression system built for real outcomes.',
+      primaryLabel: 'Book WhatsApp Consultation',
       primaryHref: '#free-trial',
       secondaryLabel: 'View Programs',
       secondaryHref: '#services'
@@ -82,9 +82,9 @@ export const gymTemplateContent: TemplateContent = {
   },
   services: {
     eyebrow: 'Fitness programs',
-    title: 'Training systems built for strength, physique, and total performance.',
+    title: 'Training systems built for strength, physique, and everyday Indian schedules.',
     description:
-      'Every program includes progression targets, coach feedback, and recovery planning so your effort converts into measurable results.',
+      'Every program includes progression targets, coach feedback, and recovery planning so your effort converts into measurable results without asking you to live in the gym.',
     items: [
       {
         title: 'Elite Strength Lab',
@@ -100,7 +100,7 @@ export const gymTemplateContent: TemplateContent = {
       },
       {
         title: 'Transformation Nutrition',
-        description: 'Macro targets, hydration protocols, and habit accountability integrated into your training program.',
+        description: 'Macro targets, hydration protocols, and habit accountability with Indian meal options integrated into your training program.',
         icon: 'Apple',
         image: '/images/demo/gym/gallery-2.jpg'
       },
@@ -114,7 +114,7 @@ export const gymTemplateContent: TemplateContent = {
   },
   trainers: [
     {
-      name: 'Marcus Hale',
+      name: 'Arjun Malhotra',
       role: 'Head Strength Coach',
       specialties: ['Strength Periodization', 'Power Development', 'Athletic Movement'],
       certifications: ['CSCS', 'USAW Level 1', 'Precision Nutrition L1'],
@@ -122,7 +122,7 @@ export const gymTemplateContent: TemplateContent = {
       image: '/images/demo/gym/trainer-1.jpg'
     },
     {
-      name: 'Elena Cruz',
+      name: 'Nisha Iyer',
       role: 'Body Recomposition Coach',
       specialties: ['Fat Loss', 'Hypertrophy', 'Female Strength Training'],
       certifications: ['NASM-CPT', 'FRC Mobility', 'Pre/Postnatal Fitness'],
@@ -130,7 +130,7 @@ export const gymTemplateContent: TemplateContent = {
       image: '/images/demo/gym/trainer-2.jpg'
     },
     {
-      name: 'Darius Knox',
+      name: 'Kabir Sethi',
       role: 'Performance Conditioning Coach',
       specialties: ['Metabolic Conditioning', 'Speed and Agility', 'Combat Athlete Prep'],
       certifications: ['EXOS XPS', 'TRX', 'CPR/AED'],
@@ -158,7 +158,7 @@ export const gymTemplateContent: TemplateContent = {
   classSchedule: [
     {
       day: 'Monday to Friday',
-      sessions: ['5:30 AM Strength Base', '7:00 AM Express HIIT', '6:15 PM Hybrid Performance', '7:30 PM Athletic Conditioning']
+      sessions: ['6:00 AM Strength Base', '7:30 AM Express HIIT', '6:30 PM Hybrid Performance', '8:00 PM Athletic Conditioning']
     },
     {
       day: 'Saturday',
@@ -173,12 +173,12 @@ export const gymTemplateContent: TemplateContent = {
     eyebrow: 'Client testimonials',
     title: 'Members who committed to the process and changed their lives.',
     description:
-      'From body recomposition to confidence and consistency, these stories capture what disciplined coaching can unlock.',
+      'From body recomposition to confidence and consistency, these stories capture what disciplined coaching can unlock for Indian professionals and students.',
     items: [
       {
         quote:
           'I lost 12.4kg in 16 weeks while increasing my squat by 27kg. Forge gave me structure, accountability, and a coaching team that genuinely cared.',
-        name: 'Maya Chen',
+        name: 'Maya Sharma',
         role: 'Transformation Track · 16 weeks',
         rating: 5,
         avatar: '/images/demo/gym/trainer-2.jpg'
@@ -186,7 +186,7 @@ export const gymTemplateContent: TemplateContent = {
       {
         quote:
           'I came in with zero consistency. Now I train 5 days a week, track nutrition in the app, and finally feel athletic again.',
-        name: 'Jordan Ellis',
+        name: 'Rohan Kapoor',
         role: 'Hybrid Performance Program',
         rating: 5,
         avatar: '/images/demo/gym/trainer-1.jpg'
@@ -194,7 +194,7 @@ export const gymTemplateContent: TemplateContent = {
       {
         quote:
           'The environment is elite but never intimidating. The coaches know your goals, and every workout feels like progress.',
-        name: 'Priya Patel',
+        name: 'Priya Mehta',
         role: 'Strength Track Member',
         rating: 5,
         avatar: '/images/demo/gym/trainer-3.jpg'
@@ -203,7 +203,7 @@ export const gymTemplateContent: TemplateContent = {
   },
   transformationStories: [
     {
-      name: 'Aiden Brooks',
+      name: 'Aditya Rao',
       program: '12-Week Body Recomposition',
       timeline: '12 weeks',
       beforeImage: '/images/demo/gym/transform-before.jpg',
@@ -214,7 +214,7 @@ export const gymTemplateContent: TemplateContent = {
         'Aiden moved from irregular home workouts to structured in-gym blocks, weekly nutrition accountability, and measurable fat-loss with strength gains.'
     },
     {
-      name: 'Sofia Reyes',
+      name: 'Sana Dutta',
       program: 'Elite Strength and Conditioning',
       timeline: '16 weeks',
       beforeImage: '/images/demo/gym/gallery-2.jpg',
@@ -227,42 +227,42 @@ export const gymTemplateContent: TemplateContent = {
   ],
   pricing: {
     eyebrow: 'Membership plans',
-    title: 'Choose your performance tier and start your next training phase.',
+    title: 'Choose your membership tier and start your next training phase.',
     description:
-      'All memberships include onboarding, app tracking, and coach support. Upgrade intensity based on your goals and accountability needs.',
+      'All memberships include onboarding, app tracking, coach support, and WhatsApp consultation. Upgrade intensity based on your goals and accountability needs.',
     items: [
       {
-        name: 'Essential',
-        price: '$129/mo',
+        name: 'Starter',
+        price: '₹999/month',
         description: 'For members building consistency and strength fundamentals.',
         features: ['3 coached classes per week', 'Open gym access', 'Monthly progress scan', 'Starter nutrition guide'],
-        ctaLabel: 'Choose Essential',
+        ctaLabel: 'Choose Starter',
         ctaHref: '#free-trial'
       },
       {
-        name: 'Performance+',
-        price: '$219/mo',
+        name: 'Growth',
+        price: '₹2499/month',
         description: 'Our most popular transformation plan for rapid, coached results.',
         features: ['Unlimited classes + open gym', 'Weekly coach check-ins', 'App-based training and nutrition', 'Recovery lounge access'],
         featured: true,
-        ctaLabel: 'Start Performance+',
+        ctaLabel: 'Start Growth',
         ctaHref: '#free-trial'
       },
       {
-        name: 'Elite Coaching',
-        price: '$349/mo',
+        name: 'Elite Annual',
+        price: '₹9999/year',
         description: 'High-touch training for body recomposition and athletic performance.',
         features: ['Weekly 1:1 coaching session', 'Custom periodized programming', 'Personalized macro coaching', 'Priority schedule and recovery'],
-        ctaLabel: 'Apply for Elite',
+        ctaLabel: 'Apply for Elite Annual',
         ctaHref: '#free-trial'
       }
     ]
   },
   gallery: {
     eyebrow: 'Gym gallery',
-    title: 'Inside Forge: training energy, elite facilities, and community momentum.',
+    title: 'Inside Forge: training energy, premium facilities, and community momentum.',
     description:
-      'A modern premium gym atmosphere built for serious work: coaching lanes, high-output classes, and social energy that keeps members consistent.',
+      'A modern premium gym atmosphere built for serious work: coaching lanes, high-output classes, and the kind of community energy that keeps Indian members consistent.',
     items: [
       { title: 'Strength Hall', description: 'Heavy lift bays with coach oversight', tone: 'dark', image: '/images/demo/gym/gallery-1.jpg' },
       { title: 'Functional Zone', description: 'Athletic conditioning, sleds, and circuits', tone: 'accent', image: '/images/demo/gym/gallery-2.jpg' },
@@ -306,23 +306,23 @@ export const gymTemplateContent: TemplateContent = {
     description:
       'Drop in for a facility tour, meet your coach, and complete your first movement and performance assessment.',
     items: [
-      { label: 'Phone', value: '(555) 203-9481', href: 'tel:+15552039481' },
+      { label: 'Phone', value: '+91 98765 43210', href: 'tel:+919876543210' },
       { label: 'Email', value: 'join@forgeathletics.com', href: 'mailto:join@forgeathletics.com' },
-      { label: 'Address', value: '1250 Market Street, Suite 4, Austin, TX' },
-      { label: 'Hours', value: 'Mon-Fri 5:00am-10:00pm · Sat-Sun 6:00am-6:00pm' }
+      { label: 'Address', value: '12th Floor, Orion Hub, Lower Parel, Mumbai, Maharashtra' },
+      { label: 'Hours', value: 'Mon-Fri 5:00am-10:00pm · Sat-Sun 6:00am-8:00pm' }
     ]
   },
   map: {
     title: 'Find Forge Athletics Club',
-    address: '1250 Market Street, Suite 4, Austin, TX',
+    address: '12th Floor, Orion Hub, Lower Parel, Mumbai, Maharashtra',
     embedUrl:
-      'https://www.openstreetmap.org/export/embed.html?bbox=-97.750%2C30.260%2C-97.730%2C30.280&layer=mapnik'
+      'https://www.openstreetmap.org/export/embed.html?bbox=72.812%2C18.978%2C72.840%2C18.994&layer=mapnik'
   },
   cta: {
     eyebrow: 'Free trial pass',
     title: 'Claim your free trial week and meet your coach.',
     description:
-      'Experience coach-led sessions, training-floor atmosphere, and app onboarding before choosing your membership tier.',
+      'Experience coach-led sessions, training-floor atmosphere, app onboarding, and a WhatsApp consultation before choosing your membership tier.',
     primaryLabel: 'Start Free Trial',
     primaryHref: '#contact',
     secondaryLabel: 'View Membership Plans',
