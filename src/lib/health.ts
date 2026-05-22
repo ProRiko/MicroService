@@ -53,7 +53,7 @@ export function validateComponentRendering() {
   try {
     const markup = renderToStaticMarkup(createElement(IndustryTemplate, { content: gymTemplateContent }));
     return markup.length > 0;
-  } catch (err) {
+  } catch {
     return false;
   }
 }

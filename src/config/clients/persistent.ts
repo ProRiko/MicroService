@@ -16,8 +16,8 @@ export function loadPersistentClients(): ClientBlueprint[] {
     const parsed = JSON.parse(raw);
     if (!Array.isArray(parsed)) return [];
     return parsed as ClientBlueprint[];
-  } catch (err) {
-    console.warn('Failed to load persistent clients', err);
+  } catch (error) {
+    console.warn('Failed to load persistent clients', error);
     return [];
   }
 }
@@ -26,8 +26,8 @@ export function savePersistentClients(items: ClientBlueprint[]) {
   try {
     ensureDir(DATA_FILE);
     writeFileSync(DATA_FILE, JSON.stringify(items, null, 2), { encoding: 'utf8' });
-  } catch (err) {
-    console.warn('Failed to save persistent clients', err);
+  } catch (error) {
+    console.warn('Failed to save persistent clients', error);
   }
 }
 
@@ -45,4 +45,6 @@ export function removePersistentClient(slug: string) {
   savePersistentClients(filtered);
 }
 
-export default { loadPersistentClients, savePersistentClients, appendPersistentClient, removePersistentClient };
+const persistentClientStore = { loadPersistentClients, savePersistentClients, appendPersistentClient, removePersistentClient };
+
+export default persistentClientStore;

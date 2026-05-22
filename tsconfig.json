@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
@@ -32,9 +31,7 @@
       {
         "name": "next"
       }
-    ],
-
-    "ignoreDeprecations": "6.0"
+    ]
   },
 
   "include": [

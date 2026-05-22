@@ -13,7 +13,7 @@ type FeatureKey =
 interface FeatureEntry {
   key: FeatureKey;
   enabled: boolean;
-  config?: Record<string, any>;
+  config?: Record<string, unknown>;
 }
 
 const features = new Map<FeatureKey, FeatureEntry>();

@@ -1,6 +1,6 @@
 import { createMetadata } from '@/config/metadata';
 import { buildSchema } from '@/lib/seo';
-import type { TemplateContent } from '@/types/content';
+import type { CtaConfig, TemplateContent } from '@/types/content';
 import type { ClientBlueprint } from '../clients';
 
 function slugify(label: string) {
@@ -28,7 +28,7 @@ export function generateClientMetadata(content: TemplateContent) {
 
 export function generateNavigationFromContent(content: TemplateContent) {
   const base = [{ label: 'Home', href: '/' }];
-  const sections = [
+  const sections: Array<'services' | 'testimonials' | 'pricing' | 'gallery' | 'faq' | 'contact'> = [
     'services',
     'testimonials',
     'pricing',
@@ -38,7 +38,7 @@ export function generateNavigationFromContent(content: TemplateContent) {
   ];
 
   const items = sections
-    .filter((s) => !!(content as any)[s])
+    .filter((section) => Boolean(content[section]))
     .map((s) => ({ label: (s.charAt(0).toUpperCase() + s.slice(1)), href: `#${s}` }));
 
   return base.concat(items);
@@ -49,11 +49,13 @@ export function generateClientSchema(content: TemplateContent) {
 }
 
 export function generateCTAs(content: TemplateContent) {
-  const ctas = [] as any[];
+  const ctas: CtaConfig[] = [];
   if (content.hero?.primaryCta) ctas.push(content.hero.primaryCta);
   if (content.hero?.secondaryCta) ctas.push(content.hero.secondaryCta);
   if (content.cta) ctas.push(content.cta);
   return ctas;
 }
 
-export default { createClientConfig, generateClientMetadata, generateNavigationFromContent };
+const clientGenerator = { createClientConfig, generateClientMetadata, generateNavigationFromContent };
+
+export default clientGenerator;

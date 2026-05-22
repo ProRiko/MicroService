@@ -4,7 +4,7 @@ import { ArrowRight, Building2, Coffee, Hotel, Scissors, Dumbbell, Sparkles, Ute
 import ResponsiveImage from '@/components/media/ResponsiveImage';
 import { Badge } from '@/components/ui/badge';
 import { ButtonLink } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { SectionContainer } from '@/components/layout/section-container';
 import { SectionHeader } from '@/components/ui/section-header';
 import { siteConfig } from '@/config/site';

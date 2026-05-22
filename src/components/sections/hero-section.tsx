@@ -4,7 +4,6 @@ import ResponsiveImage from '@/components/media/ResponsiveImage';
 import { ButtonLink } from '@/components/ui/button';
 import { SectionContainer } from '@/components/layout/section-container';
 import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
 import type { CtaConfig, HeroMedia, HeroStatsItem } from '@/types/content';
 
 interface HeroSectionProps {

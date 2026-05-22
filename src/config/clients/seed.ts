@@ -15,7 +15,7 @@ const demos = [
 ]
 
 export function getDemoBlueprints(): ClientBlueprint[] {
-  return demos.map((demo) => createClientBlueprint(demo.content as any, demo.label));
+  return demos.map((demo) => createClientBlueprint(demo.content, demo.label));
 }
 
 export default getDemoBlueprints;

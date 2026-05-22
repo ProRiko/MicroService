@@ -7,7 +7,7 @@ const registry = new Map<string, ClientBlueprint>();
 try {
   const persisted = persistent.loadPersistentClients();
   for (const p of persisted) registry.set(p.slug, p);
-} catch (err) {
+} catch {
   // ignore
 }
 
@@ -16,7 +16,7 @@ export function registerClient(blueprint: ClientBlueprint, persist = true) {
   if (persist) {
     try {
       persistent.appendPersistentClient(blueprint);
-    } catch (err) {
+    } catch {
       // ignore
     }
   }
@@ -26,7 +26,7 @@ export function unregisterClient(slug: string) {
   registry.delete(slug);
   try {
     persistent.removePersistentClient(slug);
-  } catch (err) {
+  } catch {
     // ignore
   }
 }
@@ -43,10 +43,12 @@ export function clearRegistry() {
   registry.clear();
 }
 
-export default {
+const clientRegistryApi = {
   registerClient,
   unregisterClient,
   getClient,
   listClients,
   clearRegistry
 };
+
+export default clientRegistryApi;

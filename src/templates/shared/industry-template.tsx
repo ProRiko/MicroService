@@ -20,7 +20,6 @@ import { ReviewCards } from '@/components/conversion/review-cards';
 import { BeforeAfterSection } from '@/components/conversion/before-after-section';
 import { BookingCta } from '@/components/conversion/booking-cta';
 import { InstagramProofSection } from '@/components/conversion/instagram-proof-section';
-import { SectionHeader } from '@/components/ui/section-header';
 import { StructuredData } from '@/components/seo';
 import { buildSchema } from '@/lib/seo';
 import { cn } from '@/lib/utils';

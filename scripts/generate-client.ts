@@ -4,6 +4,7 @@
  */
 import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
+import type { ClientBlueprint } from '../src/config/clients';
 import persistent from '../src/config/clients/persistent';
 import { cafeTemplateContent, gymTemplateContent, hotelTemplateContent, restaurantTemplateContent, salonTemplateContent } from '../src/content/demo';
 
@@ -57,8 +58,8 @@ try {
       seo: { ...demo.seo, title: label }
     }
   };
-  persistent.appendPersistentClient(item as any);
+  persistent.appendPersistentClient(item as ClientBlueprint);
   console.log('Registered client in data/clients.json');
-} catch (err) {
-  console.warn('Failed to register client in persistent store', err);
+} catch (error) {
+  console.warn('Failed to register client in persistent store', error);
 }

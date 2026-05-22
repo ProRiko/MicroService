@@ -1,11 +1,9 @@
 import { createMetadata } from '@/config/metadata';
 import { buildSchema } from '@/lib/seo';
 import clientRegistry from '@/config/clients/registry';
+import type { TemplateContent } from '@/types/content';
 
-type ClientContent = {
-  seo?: Record<string, unknown>;
-  [key: string]: unknown;
-};
+type ClientContent = TemplateContent;
 
 export function metadataForClient(content: ClientContent) {
   return createMetadata(content.seo);
@@ -14,6 +12,7 @@ export function metadataForClient(content: ClientContent) {
 export function jsonLdForClient(content: ClientContent) {
   return buildSchema(content);
 }
+
 
 export function sitemapEntriesForClients() {
   const clients = clientRegistry.listClients();
@@ -24,8 +23,10 @@ export function sitemapEntriesForClients() {
   }));
 }
 
-export default {
+const seoEngine = {
   metadataForClient,
   jsonLdForClient,
   sitemapEntriesForClients,
 };
+
+export default seoEngine;
