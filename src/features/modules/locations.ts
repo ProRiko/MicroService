@@ -5,4 +5,6 @@ export function primaryLocation(locations?: Location[]) {
   return locations[0];
 }
 
-export default { primaryLocation };
+const locationsModule = { primaryLocation };
+
+export default locationsModule;

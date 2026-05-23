@@ -35,4 +35,6 @@ export function listFeatures() {
   return Array.from(features.values());
 }
 
-export default { registerFeature, isFeatureEnabled, getFeatureConfig, listFeatures };
+const featureRegistry = { registerFeature, isFeatureEnabled, getFeatureConfig, listFeatures };
+
+export default featureRegistry;

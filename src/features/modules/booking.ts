@@ -8,4 +8,6 @@ export function bookingHref(cfg: BookingModuleConfig) {
   return cfg.href;
 }
 
-export default { bookingHref };
+const bookingModule = { bookingHref };
+
+export default bookingModule;

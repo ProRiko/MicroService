@@ -9,4 +9,6 @@ export function formatHours(hours?: string) {
   return hours;
 }
 
-export default { formatHours };
+const hoursModule = { formatHours };
+
+export default hoursModule;

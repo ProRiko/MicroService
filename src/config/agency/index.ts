@@ -35,4 +35,6 @@ export const onboardingChecklist = [
   'Run a production deploy and verify analytics'
 ];
 
-export default { defaultPackages, onboardingChecklist };
+const agencyConfig = { defaultPackages, onboardingChecklist };
+
+export default agencyConfig;

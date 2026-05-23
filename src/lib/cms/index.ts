@@ -7,6 +7,8 @@ export const adapters = {
   local
 };
 
-export default {
+const cmsFacade = {
   adapters
 };
+
+export default cmsFacade;

@@ -9,4 +9,6 @@ export async function listClients() {
   return clientRegistry.listClients();
 }
 
-export default { getClientBySlug, listClients };
+const localCmsAdapter = { getClientBySlug, listClients };
+
+export default localCmsAdapter;

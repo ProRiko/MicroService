@@ -49,4 +49,6 @@ export function getPreset(key: IndustryKey) {
   return industryPresets[key];
 }
 
-export default { industryPresets, getPreset };
+const industryPresetConfig = { industryPresets, getPreset };
+
+export default industryPresetConfig;

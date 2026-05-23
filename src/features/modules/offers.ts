@@ -10,4 +10,6 @@ export function activeOffers(offers: OfferItem[] | undefined) {
   return offers.filter(() => true);
 }
 
-export default { activeOffers };
+const offersModule = { activeOffers };
+
+export default offersModule;

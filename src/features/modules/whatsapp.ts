@@ -9,4 +9,6 @@ export function renderWhatsAppHref(cfg: WhatsAppConfig) {
   return `${base}?text=${encodeURIComponent(cfg.prefill)}`;
 }
 
-export default { renderWhatsAppHref };
+const whatsappModule = { renderWhatsAppHref };
+
+export default whatsappModule;
