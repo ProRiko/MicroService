@@ -1,69 +1,56 @@
-# Local Business Template Engine
+# MicroService
 
-A reusable, production-oriented Next.js App Router starter for a micro-agency that launches high-converting local business websites across multiple industries.
+MicroService is a multi-tenant business operating platform for small businesses. It combines a public website layer with a tenant dashboard for CRM, appointment management, and website content control.
 
-## What this repo is for
+## What is in the repo now
 
-This codebase is structured as a template engine, not a single website. The system is built to support many industries, many client brands, and repeated launches with a shared foundation.
+- Public landing page positioned around the SaaS platform.
+- Auth scaffold with sign in, sign up, logout, and session lookup routes.
+- Protected dashboard routes for customers, appointments, and business content.
+- Thin API handlers for dashboard and tenant data.
+- A tenant-scoped domain model and repository boundary for future PostgreSQL storage.
 
-## Stack
+## Screenshots
 
-- Next.js App Router
-- TypeScript
-- Tailwind CSS
-- Lucide React
-- Framer Motion
-- ESLint
-- Prettier
+Add screenshots of these screens as the product evolves:
 
-## Structure
+- Home page
+- Login page
+- Dashboard overview
+- Customers module
+- Appointments module
+- Website content module
 
-- `src/app` for routes and metadata
-- `src/components/layout` for shell components
-- `src/components/sections` for reusable page blocks
-- `src/components/ui` for primitive design-system components
-- `src/content` for structured industry data
-- `src/templates` for industry-specific composition
-- `src/config` for site and metadata defaults
-- `src/lib` for shared helpers
-- `src/hooks` for reusable client hooks
-- `src/styles` for global CSS and tokens
+## Architecture
 
-## Current demo
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the system map and migration path.
 
-- `/demo/gym` renders the first premium fitness demo using reusable sections and centralized content.
-- `/demo/cafe`, `/demo/restaurant`, `/demo/salon`, and `/demo/hotel` extend the same engine across other local business verticals.
+See [docs/DATABASE.md](docs/DATABASE.md) for the relational schema design.
 
-## SEO and conversion infrastructure
+See [docs/API.md](docs/API.md) for the current API contract.
 
-- Dynamic route metadata and canonical URLs
-- JSON-LD schema generation for local business, restaurant, and hotel demos
-- Floating WhatsApp CTA and sticky mobile action bar
-- Trust badges, review cards, booking CTA, business hours, and location strips
+## Setup
 
-## Scaling strategy
+1. Install dependencies.
+2. Copy `.env.example` to `.env.local` and adjust values if needed.
+3. Run `npm run dev`.
 
-1. Add a new industry content file under `src/content/demo/<industry>/`.
-2. Create or reuse a template under `src/templates/<vertical>/`.
-3. Compose the reusable sections with the new content object.
-4. Add a route under `src/app/demo/<industry>/page.tsx`.
+## Environment variables
 
-## Launching a client quickly
+- `NEXT_PUBLIC_APP_NAME` - Display name for the app.
+- `NEXT_PUBLIC_APP_URL` - Public base URL.
+- `AUTH_SECRET` - Placeholder secret for future signed auth flows.
+- `DATABASE_URL` - PostgreSQL connection string for the future database-backed repository.
+- `POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD` - Local database defaults for Docker.
 
-1. Copy the closest industry content object.
-2. Replace the brand, services, testimonials, pricing, and contact data.
-3. Swap the metadata values.
-4. Update the route slug and deploy.
+## Docker
 
-For a new client, the typical workflow is:
+- `Dockerfile` builds and runs the Next.js app.
+- `docker-compose.yml` starts the app and a local PostgreSQL container.
 
-1. Duplicate the nearest `src/content/demo/<industry>` config.
-2. Add or adjust the matching template wrapper under `src/templates`.
-3. Swap assets and business details.
-4. Publish the new route.
+## Roadmap
 
-## Notes
-
-- The project is configured for SEO-friendly metadata and semantic composition.
-- The current gallery and map sections are intentionally generic so they can be swapped for real assets and embeds per client.
-- To run locally, install dependencies and use the scripts in `package.json`.
+- Replace the in-memory repository with PostgreSQL.
+- Add CRUD mutations for customers, appointments, and services.
+- Add role-based authorization policies.
+- Add billing, analytics, and AI service boundaries.

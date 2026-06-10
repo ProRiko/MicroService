@@ -1,22 +1,22 @@
 import type { NavItem, SeoConfig } from '@/types/content';
 
 export const siteConfig = {
-  name: 'Local Business Template Engine',
+  name: 'MicroService',
   description:
-    'A reusable Next.js template system for rapidly launching premium local business websites.',
-  url: 'https://local-business-template-engine.example',
+    'A multi-tenant business operating platform for small businesses to manage their online presence, customers, and appointments.',
+  url: 'https://microservice.example',
   locale: 'en-US'
 };
 
 export const defaultSeo: SeoConfig = {
-  title: 'Local Business Template Engine',
+  title: 'MicroService',
   description: siteConfig.description,
-  keywords: ['local business websites', 'Next.js templates', 'agency system', 'SEO']
+  keywords: ['small business software', 'multi-tenant SaaS', 'customer management', 'appointments', 'business dashboard']
 };
 
 export const defaultNavigation: NavItem[] = [
-  { label: 'Services', href: '#services' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Results', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' }
+  { label: 'Dashboard', href: '/dashboard' },
+  { label: 'CRM', href: '/dashboard/customers' },
+  { label: 'Bookings', href: '/dashboard/appointments' },
+  { label: 'Website', href: '/dashboard/content' }
 ];
